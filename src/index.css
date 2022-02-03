@@ -5,8 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
- 
+
 }
 
 code {
@@ -100,22 +99,6 @@ code {
   
 }
 
-input{
-  position: absolute;
- 
-  top: 45%;
-  left: 46%;
-}
-button{
-  background-color: rgb(122, 37, 233);
-  color: #fff;
-  position: absolute;
-  border-radius: 5px;
-  border-color: rgb(122, 37, 233);
-  padding: 10px;
-  top: 50%;
-  left: 50%;
-}
 
 
 /* .parent {
@@ -147,9 +130,21 @@ height: 100px;
   background-color: lightgreen;
 } */
 
-.body1{
-  display: flex;
-  background-color: lightpink;
-  height: 100% !important;
-  width: 100% !important;
+
+
+input{
+  position: absolute;
+ 
+  top: 45%;
+  left: 46%;
+}
+.button1{
+  background-color: rgb(122, 37, 233);
+  color: #fff;
+  position: absolute;
+  border-radius: 5px;
+  border-color: rgb(122, 37, 233);
+  padding: 10px;
+  top: 50%;
+  left: 50%;
 }

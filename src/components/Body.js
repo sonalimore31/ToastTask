@@ -6,7 +6,9 @@ const Body = () => {
 
   return (
     <div className='body1'>
-      <button onClick={() => setShow(!show)}>show Toast</button>
+      <button onClick={() => setShow(!show)} className='button1'>
+        show Toast
+      </button>
       {show && <Toast message='default Message' />}
     </div>
   )
