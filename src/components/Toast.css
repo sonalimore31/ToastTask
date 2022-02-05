@@ -8,9 +8,16 @@
     left: 45%;
     color: rgb(23, 235, 129);
     z-index: 9;
+    animation: fadeOut  4s forwards;
+    animation-delay: 4s;
+   
 }
-
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
 .b1{
     border: rgb(23, 235, 129);
     border-radius: 20px;
+    margin-left: 50%;
 }
