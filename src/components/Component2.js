@@ -11,7 +11,7 @@ const Component2 = () => {
   const [timer, setTimer] = useState()
   const [show, setShow] = useState(false)
   const [country, setCountry] = useState([])
-
+  const [myInterval, setMyInterval] = useState(null)
   // useEffect(() => {
   //   fetch("https://api.knowmee.co/api/v1/master/get-country-list")
   //     .then((Response) => {
@@ -25,21 +25,21 @@ const Component2 = () => {
   const showToast = (e) => {
     e.preventDefault()
 
-    let myInterval = setInterval(() => {
-      setShow(!show)
+    const myInterval = setInterval(() => {
       if (seconds > 0) {
+        setShow(!show)
         setSeconds((seconds) => seconds - 1)
-      } else {
-        clearInterval(myInterval)
-        fetch("https://api.knowmee.co/api/v1/master/get-country-list")
-          .then((Response) => {
-            return Response.json()
-          })
-          .then((data) => {
-            setCountry(data.responseData)
-            console.log("Country", data.responseData)
-          })
       }
+      clearInterval(myInterval)
+      console.log("clear")
+      fetch("https://api.knowmee.co/api/v1/master/get-country-list")
+        .then((Response) => {
+          return Response.json()
+        })
+        .then((data) => {
+          setCountry(data.responseData)
+          console.log("Country", data.responseData)
+        })
     }, 1000)
   }
   const currentTableData = useMemo(() => {
@@ -86,7 +86,7 @@ const Component2 = () => {
           </div>
         </>
       ) : (
-        <form onSubmit={(e) => showToast(e)}>
+        <form onSubmit={showToast}>
           <div>
             <input
               type='text'
